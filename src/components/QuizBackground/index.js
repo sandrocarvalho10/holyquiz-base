@@ -1,11 +1,12 @@
 // src/components/QuizBackground/index.js
 import styled from 'styled-components';
+// import db from '../../../db.json';
 
 const QuizBackground = styled.div`
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(${({ backgroundImage }) => backgroundImage});
+  background-image: linear-gradient(-90deg, transparent, ${({ theme }) => theme.colors.mainBg} 44%), url(${({ backgroundImage }) => backgroundImage});
   background-color: ${({ theme }) => theme.colors.mainBg};
   flex: 1;
   @media screen and (max-width: 500px) {
